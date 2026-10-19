@@ -1,0 +1,18 @@
+{
+  "verified_on": "2026-10-19",
+  "source_commit": "4deaaee4fe678736b8d3923a5643adbd678b2221",
+  "scope": "Executed main CI verified before v0.1.0 release preparation; code and raw metrics are unchanged by packaging.",
+  "checks": [
+    {
+      "name": "protocol-and-security",
+      "conclusion": "success",
+      "url": "https://github.com/Sunnyvulli/catalog-sentinel/actions/runs/39298895463/job/118218554687"
+    },
+    {
+      "name": "secrets",
+      "conclusion": "success",
+      "url": "https://github.com/Sunnyvulli/catalog-sentinel/actions/runs/39298895463/job/118218554197"
+    }
+  ],
+  "release_status": "Version content prepared; GitHub release/tag is authoritative for publication."
+}
