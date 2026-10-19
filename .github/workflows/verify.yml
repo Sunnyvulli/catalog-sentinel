@@ -1,0 +1,26 @@
+name: Verify MCP boundaries
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  protocol-and-security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt black==26.10.1
+      - run: make format-check test run
+      - uses: actions/upload-artifact@v4
+        with:
+          name: measured-protocol-evidence
+          path: results/
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: docker run --rm -e GIT_CONFIG_COUNT=1 -e GIT_CONFIG_KEY_0=safe.directory -e GIT_CONFIG_VALUE_0=/repo -v "$PWD:/repo:ro" ghcr.io/gitleaks/gitleaks:v8.24.2 git /repo --log-opts=--all --redact --no-banner

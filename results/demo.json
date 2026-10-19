@@ -1,0 +1,136 @@
+{
+  "scope": "Actual local stdio protocol probes; no language-model attack evaluation",
+  "source": {
+    "input_rows": 17379,
+    "observed_days": 731,
+    "source_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f"
+  },
+  "mcp_version": "2.3.0",
+  "requests": 16,
+  "expected_denials": 13,
+  "observed_denials": 13,
+  "database_unchanged": true,
+  "median_roundtrip_seconds": 0.003087883000034708,
+  "p95_roundtrip_seconds": 0.006886477000080049,
+  "billed_api_cost_usd": 0,
+  "records": [
+    {
+      "role": "analyst",
+      "tool": "describe_dataset",
+      "expected_denial": false,
+      "denied": false,
+      "seconds": 0.003883914000198274
+    },
+    {
+      "role": "analyst",
+      "tool": "daily_totals",
+      "expected_denial": false,
+      "denied": false,
+      "seconds": 0.002600315999643499
+    },
+    {
+      "role": "analyst",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.008563518999835651
+    },
+    {
+      "role": "analyst",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.003109585999936826
+    },
+    {
+      "role": "analyst",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.0034759079999275855
+    },
+    {
+      "role": "analyst",
+      "tool": "describe_dataset",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.0029105140001775
+    },
+    {
+      "role": "analyst",
+      "tool": "execute_sql",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.0027694310001606937
+    },
+    {
+      "role": "analyst",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.0031618440002603165
+    },
+    {
+      "role": "catalog",
+      "tool": "describe_dataset",
+      "expected_denial": false,
+      "denied": false,
+      "seconds": 0.00306618000013259
+    },
+    {
+      "role": "catalog",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.006886477000080049
+    },
+    {
+      "role": "catalog",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.0036729949997607036
+    },
+    {
+      "role": "catalog",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.0032211729999289673
+    },
+    {
+      "role": "catalog",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.002919028000178514
+    },
+    {
+      "role": "catalog",
+      "tool": "describe_dataset",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.002733708000050683
+    },
+    {
+      "role": "catalog",
+      "tool": "execute_sql",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.002529417999994621
+    },
+    {
+      "role": "catalog",
+      "tool": "daily_totals",
+      "expected_denial": true,
+      "denied": true,
+      "seconds": 0.003008031000263145
+    }
+  ],
+  "limits": [
+    "Roles are assigned by trusted stdio host, not remote OAuth",
+    "Hash chaining cannot prevent rewriting or truncation by the OS owner",
+    "Tool annotations are hints, not security controls",
+    "Typed misuse probes, not a language-model prompt-injection benchmark"
+  ]
+}
